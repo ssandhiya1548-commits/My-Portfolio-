@@ -1,0 +1,21 @@
+// script.js (Optional: You can add JavaScript for dynamic behavior here)
+
+// Example: Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Example: A simple alert when clicking on a project card (can be removed or modified)
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', function() {
+        // alert(`You clicked on ${this.querySelector('h3').textContent}`);
+        // In a real portfolio, this would navigate to a project details page
+        // or open a modal with more info.
+    });
+});
